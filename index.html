@@ -879,6 +879,9 @@ document.getElementById('fileInput').addEventListener('change', function(e) {
 //  CONFIRM & SEND
 // ──────────────────────────────────────────────
 async function confirmCheckin() {
+  const btn = document.getElementById('btnConfirm');
+  btn.disabled = true;
+  btn.textContent = '⏳ กำลังส่ง...';
   const name   = document.getElementById('nameSelect').value;
   const action = pendingAction.action;
   const label  = pendingAction.label;
